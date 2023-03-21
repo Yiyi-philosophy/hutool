@@ -1,0 +1,30 @@
+# https://github.com/dromara/hutool,ec14f8384ad384fb6e054df722fe089d64af0c41,
+# hutool-core,
+# cn.hutool.core.annotation.AnnotationUtilTest.getCombinationAnnotationsWithClassTest,ID
+name: Test:AnnotationUtilTest.getCombinationAnnotationsWithClassTest
+run-name: Known Flaky test
+on: [push]
+jobs:
+  Test_Without_Nondex_Shuffling:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 8
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+      - name: Test
+        run: mvn -pl hutool-core test -Dtest=cn.hutool.core.annotation.AnnotationUtilTest#getCombinationAnnotationsWithClassTest
+        
+  Test_With_Nondex_Shuffling:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 8
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+      - name: Test
+        run: mvn -X -pl hutool-core edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=cn.hutool.core.annotation.AnnotationUtilTest#getCombinationAnnotationsWithClassTest
