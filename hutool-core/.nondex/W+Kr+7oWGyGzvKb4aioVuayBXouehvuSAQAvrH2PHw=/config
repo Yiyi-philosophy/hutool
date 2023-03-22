@@ -1,0 +1,11 @@
+nondexFilter=.*
+nondexMode=FULL
+nondexSeed=933178
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/uiuc_se/hutool/hutool-core/.nondex
+nondexJarDir=/home/uiuc_se/hutool/hutool-core/.nondex
+nondexExecid=W+Kr+7oWGyGzvKb4aioVuayBXouehvuSAQAvrH2PHw=
+nondexLogging=CONFIG
+test=
