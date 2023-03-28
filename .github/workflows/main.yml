@@ -29,7 +29,7 @@ jobs:
       - name: Test
         run: mvn -pl hutool-core edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=cn.hutool.core.annotation.AnnotationUtilTest#getCombinationAnnotationsWithClassTest
       
-  Test_With_Nondex_Shuffling-getAnnotationSyncAlias:
+  T_Nondex-getAnnotationSyncAlias:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -41,7 +41,7 @@ jobs:
       - name: Test
         run: mvn -pl hutool-core edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=cn.hutool.core.annotation.AnnotationUtilTest#getAnnotationSyncAlias
         
-  Test_With_Nondex_Shuffling-getAnnotationValueTest:
+  T_Nondex_Shuffling-getAnnotationValueTest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -53,7 +53,7 @@ jobs:
       - name: Test
         run: mvn -pl hutool-core edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=cn.hutool.core.annotation.AnnotationUtilTest#getAnnotationValueTest
         
-  Test_With_Nondex_Shuffling-getAnnotationValueTest2:
+  T_Nondex_Shuffling-getAnnotationValueTest2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
