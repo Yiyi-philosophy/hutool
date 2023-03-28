@@ -57,7 +57,7 @@ public class AnnotationUtilTest {
 	}
 
 	@AnnotationForTest(value = "测试", names = {"测试1", "测试2"})
-	@RepeatAnnotationForTest
+	//@RepeatAnnotationForTest
 	static class ClassWithAnnotation{
 		public void test(){
 
