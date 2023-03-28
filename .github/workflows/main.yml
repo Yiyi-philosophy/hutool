@@ -27,4 +27,4 @@ jobs:
           java-version: '8'
           distribution: 'temurin'
       - name: Test
-        run: mvn -X -pl hutool-core edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=cn.hutool.core.annotation.AnnotationUtilTest#getCombinationAnnotationsWithClassTest
+        run: mvn -pl hutool-core edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=cn.hutool.core.annotation.AnnotationUtilTest#getCombinationAnnotationsWithClassTest
