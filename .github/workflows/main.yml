@@ -17,7 +17,7 @@ jobs:
       - name: Test
         run: mvn -pl hutool-core test -Dtest=cn.hutool.core.annotation.AnnotationUtilTest#getCombinationAnnotationsWithClassTest
         
-  Test_With_Nondex_Shuffling:
+  Test_With_Nondex_Shuffling-getCombinationAnnotationsWithClassTest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -28,3 +28,52 @@ jobs:
           distribution: 'temurin'
       - name: Test
         run: mvn -pl hutool-core edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=cn.hutool.core.annotation.AnnotationUtilTest#getCombinationAnnotationsWithClassTest
+  
+  Test_With_Nondex_Shuffling-getCombinationAnnotationsTest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 8
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+      - name: Test
+        run: mvn -pl hutool-core edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=cn.hutool.core.annotation.AnnotationUtilTest#getCombinationAnnotationsTest
+        
+  Test_With_Nondex_Shuffling-getAnnotationSyncAlias:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 8
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+      - name: Test
+        run: mvn -pl hutool-core edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=cn.hutool.core.annotation.AnnotationUtilTest#getAnnotationSyncAlias
+        
+  Test_With_Nondex_Shuffling-getAnnotationValueTest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 8
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+      - name: Test
+        run: mvn -pl hutool-core edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=cn.hutool.core.annotation.AnnotationUtilTest#getAnnotationValueTest
+        
+  Test_With_Nondex_Shuffling-getAnnotationValueTest2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 8
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+      - name: Test
+        run: mvn -pl hutool-core edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=cn.hutool.core.annotation.AnnotationUtilTest#getAnnotationValueTest2
+        
